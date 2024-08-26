@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --colorPrimario: #e7ebf0;
+    --colorSecundario: #F6F6F6;
+    --colorTerciario: #0A3871;
+
+    --fuenteInter: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuenteInter);
+}
+
+body {
+    background-color: var(--colorPrimario);
+    color: var(--colorTerciario);
+    box-sizing: border-box;
+}
+
+.logoAlura {
+    padding: 2% 1% 0% 2%;
+}
+
+.encriptador {
+    display: flex;
+    align-items: center;
+    padding: 3% 5%;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.encriptadorInput {
+    width: 60%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorSecundario);
+    align-items: center;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    padding: 2%;
+}
+
+.inputTexto {
+    display: flex;
+    width: 90%;
+    height: 70%;
+    margin-bottom: 2%;
+}
+
+.texto {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--colorSecundario);
+    font-family: var(--fuenteInter);
+    color: var(--colorTerciario);
+    font-size: 32px;
+    padding: 2% 5%;
+    text-align: left;
+    box-sizing: border-box;
+    resize: none;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.texto::placeholder {
+    font-family: var(--fuenteInter);
+    color: var(--colorTerciario);
+    font-weight: 600;
+    font-size: 32px;
+    text-align: left;
+}
+
+
+.alerta {
+    display: flex;
+    justify-content: flex-start; 
+    width: 90%; 
+    margin-top: 10%; 
+    padding-left: 5%;
+    gap: 8px; /* Espacio entre el icono y el texto */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+}
+
+.alerta img {
+    width: 16px; /* Ajusta el tamaño del icono según lo necesites */
+    height: 16px; /* Mantiene la proporción del icono */
+}
+
+.inputAlerta {
+    font-size: 12px;
+    color: #43484e;
+}
+
+
+.inputBotones {
+    display: flex;
+    width: 90%; 
+    justify-content: space-between; 
+    margin-top: 2%;
+}
+
+.inputBotonEncriptar{
+    flex: 1;
+    padding: 4% 15%;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--colorTerciario);
+    color: var(--colorSecundario);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.inputBotonDesencriptar{
+    flex: 1;
+    padding: 4% 15%;
+    border: solid;
+    border-radius: 24px;
+    background-color: var(--colorPrimario);
+    color: var(--colorTerciario);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.inputBotonEncriptar:hover, .inputBotonDesencriptar:hover {
+    background-color: #0056b3;
+}
+
+.inputBotonDesencriptar:hover {
+    background-color: #c1cad7;
+}
+
+.encriptadorOutput {
+    width: 30%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorSecundario);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    padding: 2%;
+    gap: 1%;
+}
+
+.outputResultado {
+    font-size: 24px;
+    color: var(--colorTerciario);
+    text-align: center;
+    padding: 2%;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.outputImagen{
+    width: 90%;
+}
+
+.OutputbotonCopiar {
+    padding: 6% 25%;
+    border: solid;
+    border-radius: 24px;
+    background-color: var(--colorPrimario);
+    color: var(--colorTerciario);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5% 2%; 
+    box-sizing: border-box; 
+
+}
+
+.OutputbotonCopiar:hover {
+    background-color: #c1cad7;
+}
+
+
+.footer{
+    background-color: var(--colorTerciario);
+    padding: 24px;
+    color: var(--colorPrimario);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fuenteInter);
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+    .encriptador {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .encriptadorInput, .encriptadorOutput {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-radius: 16px;
+        padding: 2%;
+    }
+
+    .outputImagen {
+        display: none;
+    }
+
+    .inputBotones {
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .outputResultado, .outputSubtitulo, .outputTexto, .OutputbotonCopiar {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .OutputbotonCopiar {
+        padding: 12px;
+        font-size: 14px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .encriptador {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .encriptadorInput, .encriptadorOutput {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-radius: 16px;
+        padding: 2%;
+    }
+
+    .outputImagen {
+        display: none;
+    }
+
+    .inputBotones {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .outputResultado, .outputSubtitulo, .outputTexto, .OutputbotonCopiar {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .OutputbotonCopiar {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
